@@ -9,6 +9,9 @@ public class max {
         findmaxf(50.2f,45.6f,30.9f);
         findmaxf(45.6f,50.2f,30.9f);
         findmaxf(45.6f,30.9f,50.2f);
+        findmaxs("Peach","Apple","Banana");
+        findmaxs("Apple","Peach","Banana");
+        findmaxs("Banana","Apple","Peach");
     }
     private static void findmaxi(int n1,int n2,int n3) {
         Integer temp = n1;
@@ -30,6 +33,17 @@ public class max {
             temp = n3;
         }
 
+        System.out.println(temp);
+    }
+
+    private static void findmaxs(String n1,String n2,String n3) {
+        String temp = n1;
+        if(temp.compareTo(n2)<0){
+            temp = n2;
+        }
+        if(temp.compareTo(n3)<0){
+            temp = n3;
+        }
         System.out.println(temp);
     }
 }
